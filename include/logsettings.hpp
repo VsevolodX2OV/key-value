@@ -1,4 +1,4 @@
-// Copyright by Enigma
+//Copyright 2022 by Winter Solider
 
 #ifndef INCLUDE_LOGSETTINGS_HPP_
 #define INCLUDE_LOGSETTINGS_HPP_

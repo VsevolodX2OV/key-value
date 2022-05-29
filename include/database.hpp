@@ -1,4 +1,4 @@
-// Copyright by ENigma
+//Copyright 2022 by Winter Solider
 
 #ifndef INCLUDE_DATABASE_HPP_
 #define INCLUDE_DATABASE_HPP_

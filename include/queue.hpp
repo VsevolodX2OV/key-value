@@ -1,4 +1,4 @@
-// Copyright by Enigma
+//Copyright 2022 by Winter Solider
 
 #ifndef INCLUDE_QUEUE_HPP_
 #define INCLUDE_QUEUE_HPP_
