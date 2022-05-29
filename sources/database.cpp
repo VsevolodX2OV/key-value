@@ -5,12 +5,10 @@
 
 
 void make_inp_BD(const std::string& directory) {
-
   const unsigned int NUMBER_OF_COLUMNS = 3;
   const unsigned int NUMBER_OF_VALUES = 5;
 
   try {
-
     rocksdb::Options options;
 
     options.create_if_missing = true;
@@ -79,7 +77,6 @@ My_BD::My_BD(std::string& input_dir,
 
   std::vector<rocksdb::ColumnFamilyDescriptor> desc;
   try {
-
     s = rocksdb::DB::ListColumnFamilies(rocksdb::DBOptions(), input_, &names);
     if (!s.ok()) throw std::runtime_error("ListColumnFamilies is failed");
 
@@ -112,7 +109,6 @@ My_BD::My_BD(std::string& input_dir,
   } catch (std::exception& e) {
     BOOST_LOG_TRIVIAL(error) << e.what();
   }
-
 }
 
 
@@ -123,7 +119,6 @@ void My_BD::parse_inp_BD() {
   for (size_t i = 0; i < fromHandles_.size(); ++i) {
     it = inpBD_->NewIterator(rocksdb::ReadOptions(), fromHandles_[i]);
     for (it->SeekToFirst(); it->Valid(); it->Next()) {
-
       ProdQueue_.push({i, it->key().ToString(), it->value().ToString()});
     }
     iterators.emplace_back(it);
@@ -140,7 +135,6 @@ void My_BD::parse_inp_BD() {
 
 My_BD::~My_BD() {
   try {
-
     rocksdb::Status s;
     if (!fromHandles_.empty() && inpBD_ != nullptr) {
       for (auto& x : fromHandles_) {
@@ -201,7 +195,6 @@ void My_BD::make_cons_pool() {
 
   while (!ParseFlag_ || !ProdQueue_.empty()) {
     if (ProdQueue_.pop(item)) {
-
       pool_.enqueue([this](Entry x) { make_cons_queue(x); }, item);
     }
   }
@@ -213,7 +206,6 @@ void My_BD::write_new_BD() {
 
   while (!ConsQueue_.empty() || !HashFlag_) {
     if (ConsQueue_.pop(item)) {
-
       write_val_to_BD(std::move(item));
     }
   }
