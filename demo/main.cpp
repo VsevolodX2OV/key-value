@@ -1,4 +1,4 @@
-// Copyright 2022 Shevelyova Darya photodoshfy@gmail.com
+// Copyright by Enigma
 
 #include <iostream>
 #include <boost/program_options.hpp>
@@ -50,4 +50,4 @@ int main(int argc, char **argv){
   manager.start_process();
   return 0;
 }
-//./demo --output outBD --thread_count 2 --log_level info
+

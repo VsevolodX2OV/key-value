@@ -1,4 +1,4 @@
-// Copyright 2022 Shevelyova Darya photodoshfy@gmail.com
+// Copyright by Enigma
 
 #ifndef INCLUDE_LOGSETTINGS_HPP_
 #define INCLUDE_LOGSETTINGS_HPP_

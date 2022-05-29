@@ -1,4 +1,4 @@
-// Copyright 2022 Shevelyova Darya photodoshfy@gmail.com
+// Copyright by Enigma
 
 #include <stdexcept>
 #include <thread>

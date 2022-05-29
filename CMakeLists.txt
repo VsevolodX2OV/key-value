@@ -48,7 +48,7 @@ find_package(Boost CONFIG REQUIRED
 
 add_library(${PROJECT_NAME} STATIC
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/database.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/logsettings.cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/logsettings.cpp include/picosha2.h)
 
 add_executable(demo
   ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp
