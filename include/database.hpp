@@ -45,7 +45,6 @@ class My_BD {
   void make_cons_pool();
 
  private:
-
   bool ParseFlag_ = false;
 
   bool HashFlag_ = false;
